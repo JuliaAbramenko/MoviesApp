@@ -1,4 +1,4 @@
-package com.example.moviesapp.data
+package com.example.moviesapp.data.model
 
 import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
