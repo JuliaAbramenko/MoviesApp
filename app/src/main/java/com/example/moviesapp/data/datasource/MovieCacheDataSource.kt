@@ -7,5 +7,4 @@ interface MovieCacheDataSource {
 
     suspend fun saveMoviesToCache(movies: List<Movie>)
 
-    suspend fun clearAll()
 }
