@@ -1,4 +1,4 @@
-package com.example.moviesapp.datasourceimpl
+package com.example.moviesapp.data.datasourceimpl
 
 import com.example.moviesapp.data.datasource.MovieCacheDataSource
 import com.example.moviesapp.data.model.Movie
