@@ -25,18 +25,16 @@ class MovieRepositoryImpl(
         return newListOfMovies
     }
 
-    suspend fun getMoviesFromApi(): List<Movie> {
+    private suspend fun getMoviesFromApi(): List<Movie> {
         lateinit var movieList: List<Movie>
-        try {
-            val response = movieRemoteDataSource.getMovies()
-            val body = response.body()
-            if(body!=null) {
-                movieList = body.movies
-            }
-        } catch (exception: Exception) {
 
+        val response = movieRemoteDataSource.getMovies()
+        val body = response.body()
+        if (body != null){
+            movieList = body.movies
         }
         return movieList
+
 
     }
 
@@ -44,7 +42,7 @@ class MovieRepositoryImpl(
         lateinit var movieList: List<Movie>
         try {
             movieList = movieLocalDataSource.getMoviesFromDB()
-        } catch (exception: Exception) {
+        } catch (_: Exception) {
 
         }
         if(movieList.isNotEmpty()) {
